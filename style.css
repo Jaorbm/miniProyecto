@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+
+.header {
+    background-color: #ffd60a;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin:  0 auto;
+}
+
+
+.nav-link {
+    color: #284b63;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    text-decoration: none;
+    margin-right: 40px;
+    align-items: center;
+    left: 100%;
+    transition: left 0.3s;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    background-color: #ffc300;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none;
+}
+
+.boton-mostrar-seccion-2 {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.boton-mostrar-seccion-2:hover {
+    background-color: brown;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #ffc300;
+        position: fixed;
+        left: 100%;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+    
+        height: calc(100% - 60px);
+        overflow-y: auto;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    
+    .nav-menu-link:hover {
+        background: none;
+        color: #8a5a44;
+    }
+
+    .boton-mostrar-seccion-2:hover {
+        background: none;
+        color: #8a5a44;
+    }
+
+    .boton-mostrar-seccion-2 {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+}
